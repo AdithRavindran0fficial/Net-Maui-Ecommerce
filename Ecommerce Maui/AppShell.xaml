@@ -5,11 +5,51 @@
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
     xmlns:local="clr-namespace:Ecommerce_Maui"
     Shell.FlyoutBehavior="Disabled"
-    Title="Ecommerce_Maui">
+    xmlns:Pages="clr-namespace:Ecommerce_Maui.Views"
+    Title="Ecommerce_Maui"
+    Shell.TabBarBackgroundColor="{StaticResource Primary}"
+    Shell.TabBarTitleColor="{StaticResource White}"
+    Shell.BackgroundColor="{StaticResource Primary}">
 
-    <ShellContent
+   
+    <!--<ShellContent
         Title="Home"
         ContentTemplate="{DataTemplate local:MainPage}"
-        Route="MainPage" />
+        Route="MainPage" />-->
+    <TabBar>
+        <ShellContent Title="Home"
+                      Icon="home"
+                      ContentTemplate="{DataTemplate Pages:Home}"
+                      Route="Home"/>
+
+        <ShellContent Title="Product"
+                     Icon="cart"
+                     ContentTemplate="{DataTemplate Pages:Product}"
+                     Route="Product"/>
+
+        <ShellContent  Title="orders"
+                       Icon="orders"
+                       ContentTemplate="{DataTemplate Pages:Orders}"
+                       Route="Orders"/>
+
+        <ShellContent Title="Cart"
+                        Icon="cart"
+                        ContentTemplate="{DataTemplate Pages:Cart}"
+                        Route="Cart"/>  
+
+        <ShellContent   Title="Help"
+                        Icon="Help"
+                        ContentTemplate="{DataTemplate Pages:Help}"
+                        Route="help"/>
+        
+        <ShellContent Title="Profile"
+                      Icon="profile"
+                      ContentTemplate="{DataTemplate Pages:Profile}"
+                      Route="profile"/>
+        
+       
+        
+
+    </TabBar>
 
 </Shell>

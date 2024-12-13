@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Ecommerce_Maui.Views.Product"
+             Title="Products"
+             Shell.BackgroundColor="White"
+             Shell.NavBarIsVisible="False"
+             >
+    <VerticalStackLayout>
+        <Grid RowDefinitions="Auto,Auto">
+            <HorizontalStackLayout VerticalOptions="Start" HorizontalOptions="Start" Spacing="30">
+                <Image Source="images" WidthRequest="75" HeightRequest="75"/>
+
+                <Border HeightRequest="35"
+     StrokeShape="RoundRectangle 6">
+                    <Grid ColumnDefinitions="Auto,Auto">
+                        <Entry Grid.Column="0" WidthRequest="200" HeightRequest="50" BackgroundColor="White" Placeholder="search..." />
+                        <Image Source="search" Grid.Column="1" WidthRequest="20"/>
+                    </Grid>
+                </Border>
+                <Image Source="cart" WidthRequest="30"/>
+
+            </HorizontalStackLayout>
+        </Grid>
+        
+        
+        
+        </VerticalStackLayout>
+</ContentPage>
