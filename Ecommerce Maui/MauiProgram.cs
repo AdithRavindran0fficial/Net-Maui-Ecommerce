@@ -1,5 +1,6 @@
 ﻿using Ecommerce_Maui.Services.Productservices;
 using Ecommerce_Maui.ViewModels;
+using Ecommerce_Maui.Views;
 using Microsoft.Extensions.Logging;
 
 namespace Ecommerce_Maui
@@ -18,12 +19,15 @@ namespace Ecommerce_Maui
                 });
             builder.Services.AddSingleton<IProductService, ProductServicecs>();
             builder.Services.AddSingleton<ProductViewModel>();
+            builder.Services.AddTransient<Product>();
+            builder.Services.AddSingleton<DetailsViewModel>();
+            builder.Services.AddSingleton<Details>();
             
 
 #if DEBUG
             builder.Services.AddHttpClient("ProductClient",
                 HttpClient => {
-                    HttpClient.BaseAddress = new Uri("'https://fakestoreapi.com/");
+                    HttpClient.BaseAddress = new Uri("https://fakestoreapi.com/");
 
 
                 });

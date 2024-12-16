@@ -18,17 +18,17 @@ namespace Ecommerce_Maui.Services.Productservices
         }
 
         private HttpClient HttpClient => httpClientFactory.CreateClient("ProductClient");
-        public async Task<Product> GetProductByIdAsync(int id)
+        public async Task<Products> GetProductByIdAsync(int id)
         {
-            var product = await HttpClient.GetFromJsonAsync<Product>($"products/{id}");
+            var product = await HttpClient.GetFromJsonAsync<Products>($"products/{id}");
             return product;
         }
 
-        public async Task<IEnumerable<Product>> GetProductsAsync()
+        public async Task<IEnumerable<Products>> GetProductsAsync()
         {
             try
             {
-                var Products = await HttpClient.GetFromJsonAsync<IEnumerable<Product>>("products");
+                var Products = await HttpClient.GetFromJsonAsync<IEnumerable<Products>>("products");
                 if(Products is not null)
                 {
                     return Products;

@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace Ecommerce_Maui.Models
 {
-    public  class Product
+    public  class Products
     {
         [JsonPropertyName("id")]
         public int Id { get; set; }

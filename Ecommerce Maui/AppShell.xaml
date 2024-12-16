@@ -26,6 +26,8 @@
                      Icon="cart"
                      ContentTemplate="{DataTemplate Pages:Product}"
                      Route="Product"/>
+        
+        
 
         <ShellContent  Title="orders"
                        Icon="orders"
@@ -51,5 +53,8 @@
         
 
     </TabBar>
+    <ShellContent Title="Details"
+                  ContentTemplate="{DataTemplate Pages:Details}"
+                  Route="Details"/>
 
 </Shell>

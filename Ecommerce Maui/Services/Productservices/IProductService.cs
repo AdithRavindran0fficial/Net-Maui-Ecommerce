@@ -9,9 +9,9 @@ namespace Ecommerce_Maui.Services.Productservices
 {
     public interface IProductService
     {
-        Task<IEnumerable<Product>> GetProductsAsync();
+        Task<IEnumerable<Products>> GetProductsAsync();
 
-        Task<Product> GetProductByIdAsync(int id);
+        Task<Products> GetProductByIdAsync(int id);
 
         
     }
